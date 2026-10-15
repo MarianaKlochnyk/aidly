@@ -1,0 +1,248 @@
+.register {
+  width: 100%;
+  height: 100vh;
+  padding-bottom: 56px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: #f4f2eb;
+  box-sizing: border-box;
+
+  &__header {
+    position: relative;
+    margin-bottom: 60px;
+  }
+
+  &__decor {
+    position: absolute;
+    top: -176px; // Підберіть точне зміщення вгору
+    left: -80px; // Зміщення вліво
+    width: 568px; // Ширина з Figma[cite: 12]
+    height: 347px; // Висота з Figma[cite: 12]
+    background-color: #000000;
+    border-radius: 50%; // Робить фігуру овалом
+    transform: rotate(-36deg); // Поворот на 36 градусів з Figma[cite: 12]
+    z-index: 0;
+  }
+
+  &__text {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 20px;
+    gap: 8px;
+    width: 268px;
+    margin-bottom: 32px;
+  }
+
+  &__title {
+    color: #f4f2eb;
+    font-weight: 400;
+    font-size: 32px;
+    margin: 0;
+    padding: 0;
+    margin-top: 72px;
+  }
+
+  &__subtitle {
+    color: #f4f2eb;
+    font-weight: 200;
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__arraw {
+    margin-left: 20px;
+    position: relative;
+    z-index: 1;
+    width: 16px;
+    height: 13px;
+    color: #f4f2eb;
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    padding: 0 20px;
+    margin-bottom: 32px;
+  }
+
+  &__main-title {
+    font-size: 20px;
+    color: #000000;
+    font-weight: bolder;
+    padding: 0 20px;
+    margin-bottom: 16px;
+  }
+
+  &__inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    gap: 28px;
+  }
+
+  &__block-obj {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 1;
+    gap: 8px;
+  }
+
+  &__label {
+    color: #000000;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  &__input {
+    height: 52px;
+    width: 100%;
+    border-radius: 12px;
+    background-color: #f4f2eb;
+    border: none;
+    padding: 0 12px;
+    box-shadow:
+      inset 3px 3px 6px #aaa9a2,
+      inset -3px -3px 4px #fff;
+
+    &::placeholder {
+      color: #000000;
+      font-size: 12px;
+      font-weight: lighter;
+    }
+  }
+
+  &__checkbox-conteiner {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+  }
+
+  &__checkbox {
+    position: relative;
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: #f4f2eb;
+    border: 1px solid #000000;
+    border-radius: 3px;
+    width: 14px;
+    height: 14px;
+    &:checked {
+      background-color: #000000; // робимо чорним фоном при натисканні, якщо хочете повний чорний квадрат як на макеті
+    }
+
+    &:checked::after {
+      content: "";
+      position: absolute;
+      left: 4px;
+      top: 1px;
+      width: 2px;
+      height: 6px;
+      border: solid #f4f2eb;
+      border-width: 0 3px 3px 0;
+      transform: rotate(45deg);
+    }
+  }
+
+  &__checkbox-label {
+    max-width: 312px;
+    color: #000000;
+    font-size: 10px;
+
+    &-span {
+      color: grey;
+    }
+  }
+
+  &__button {
+    width: 100%;
+    height: 48px;
+    background-color: #000000;
+    color: #f4f2eb;
+    font-size: 12px;
+    font-weight: 400;
+    border-radius: 22px;
+    box-shadow: 4px 4px 4px #aaa9a2;
+  }
+
+  &__or {
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: grey;
+    margin-bottom: 32px;
+    gap: 4px;
+
+    &::before {
+      content: "";
+      height: 1px;
+      width: 100%;
+      background-color: grey;
+    }
+
+    &::after {
+      content: "";
+      height: 1px;
+      width: 100%;
+      background-color: grey;
+    }
+  }
+
+  &__buttons-sm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 38px;
+    margin-bottom: 36px;
+  }
+
+  &__button-sm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f2eb;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    box-shadow:
+      -4px -4px 8px #fff,
+      4px 4px 4px #aaa9a2;
+  }
+
+  &__ready-account {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+  }
+
+  &__question {
+    font-size: 10px;
+    color: grey;
+  }
+
+  &__ready-button {
+    background-color: none;
+    color: #000000;
+    font-size: 10px;
+    font-weight: 500;
+  }
+}
+
+.block-input {
+  width: 100%;
+}

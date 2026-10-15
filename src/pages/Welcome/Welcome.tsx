@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react";
+import { useHistory } from 'react-router-dom';
+
 import "./Welcome.scss";
 import splashImg from "../../images/splash_img.png";
 
 const Welcome = () => {
   const [isLoaded, setIsLoaded] = useState(false);
+  const history = useHistory();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -32,10 +35,10 @@ const Welcome = () => {
             </p>
           </div>
           <div className="welcome__buttons">
-            <button className="button welcome__buttons--create">
+            <button onClick={() => history.push('/register')} className="button welcome__buttons--create">
               СТВОРИТИ АКАУНТ
             </button>
-            <button className="button welcome__buttons--sign">
+            <button onClick={() => history.push('/login')} className="button welcome__buttons--sign">
               УВІЙТИ
             </button>
           </div>
