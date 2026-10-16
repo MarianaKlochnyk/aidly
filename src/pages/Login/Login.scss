@@ -4,7 +4,6 @@
   overflow-y: auto;
   overflow-x: hidden;
   background-color: #f4f2eb;
-  box-sizing: border-box;
 
   &__header {
     position: relative;
@@ -13,13 +12,13 @@
 
   &__decor {
     position: absolute;
-    top: -176px; // Підберіть точне зміщення вгору
-    left: -80px; // Зміщення вліво
-    width: 568px; // Ширина з Figma[cite: 12]
-    height: 347px; // Висота з Figma[cite: 12]
+    top: -176px;
+    left: -80px;
+    width: 568px; 
+    height: 347px; 
     background-color: #000000;
-    border-radius: 50%; // Робить фігуру овалом
-    transform: rotate(-36deg); // Поворот на 36 градусів з Figma[cite: 12]
+    border-radius: 50%; 
+    transform: rotate(-36deg); 
     z-index: 0;
   }
 
@@ -162,7 +161,6 @@
     align-items: center;
     justify-content: center;
     gap: 32px;
-    margin-bottom: 84px;
   }
 
   &__button-sm {
@@ -179,10 +177,15 @@
   }
 
   &__ready-account {
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
+    bottom: 56px;
+    left: 0;
+    right: 0;
     gap: 2px;
+    top: auto;
   }
 
   &__question {

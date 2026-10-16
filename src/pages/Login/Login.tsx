@@ -58,7 +58,7 @@ const Login = () => {
               className="login__input"
               placeholder="Введіть пароль"
             />
-            <button className="login__pasword-btn">Забули пароль?</button>
+            <button onClick={() => {history.push("/reset-password")}} className="login__pasword-btn">Забули пароль?</button>
           </div>
         </div>
 
@@ -78,16 +78,15 @@ const Login = () => {
             <img src={appleIcon} alt="Apple Icon" className="login__icon-sm" />
           </button>
         </div>
-
-        <div className="login__ready-account">
-          <p className="login__question">Ще не маєте акаунта?</p>
-          <button
-            className="login__ready-button"
-            onClick={() => history.push("/register")}
-          >
-            Зареєструватися
-          </button>
-        </div>
+      </div>
+      <div className="login__ready-account">
+        <p className="login__question">Ще не маєте акаунта?</p>
+        <button
+          className="login__ready-button"
+          onClick={() => history.push("/register")}
+        >
+          Зареєструватися
+        </button>
       </div>
     </div>
   );

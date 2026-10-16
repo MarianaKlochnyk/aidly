@@ -111,7 +111,7 @@ const Register = () => {
           </label>
         </div>
 
-        <button className="register__button">СТВОРИТИ АКАУНТ</button>
+        <button className="register__button" onClick = {() => {history.push("register-code")}}>СТВОРИТИ АКАУНТ</button>
       </div>
       <p className="register__or">або</p>
 

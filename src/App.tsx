@@ -4,6 +4,12 @@ import { IonReactRouter } from "@ionic/react-router";
 import Welcome from "./pages/Welcome/Welcome";
 import Register from "./pages/Register/Register";
 import Login from "./pages/Login/Login";
+import RegisterCode from "./pages/RegisterCode/RegisterCode";
+import RegisterCodePassword from "./pages/RegisterCodePassword/RegisterCodePassword";
+import SuccessVerification from "./pages/SuccessVerification/SuccessVerification";
+import ResetPassword from "./pages/ResetPassword/ResetPassword";
+import NewPassword from "./pages/NewPassword/NewPassword";
+import PasswordSuccess from "./pages/PasswordSuccess/PasswordSuccess";
 
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
@@ -47,6 +53,16 @@ const App: React.FC = () => (
         </Route>
         <Route exact path="/register" component={Register}></Route>
         <Route exact path="/login" component={Login}></Route>
+        <Route exact path="/register-code" component={RegisterCode}></Route>
+        <Route exact path="/register-code-for-password" component={RegisterCodePassword}></Route>
+        <Route
+          exact
+          path="/success-verification"
+          component={SuccessVerification}
+        ></Route>
+        <Route exact path="/reset-password" component={ResetPassword}></Route>
+        <Route exact path="/new-password" component={NewPassword}></Route>
+        <Route exact path="/success-password" component={PasswordSuccess}></Route>
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>
