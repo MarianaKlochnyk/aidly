@@ -14,13 +14,13 @@ const RegisterCodePassword = () => {
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
-          stroke-width="1.5"
+          strokeWidth="1.5"
           stroke="currentColor"
           className="register-code__arraw"
         >
           <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeLinecap="round"
+            strokeLinejoin="round"
             d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
           />
         </svg>
@@ -36,33 +36,33 @@ const RegisterCodePassword = () => {
 
         <div className="register-code__inputs">
           <div className="register-code__block">
-            <label htmlFor="input"></label>
-            <input id="input" type="text" className="register-code__input" />
+            <label htmlFor="code-1"></label>
+            <input id="code-1" type="text" className="register-code__input" />
           </div>
 
           <div className="register-code__block">
-            <label htmlFor="input" className="visually-hidden"></label>
-            <input id="input" type="text" className="register-code__input" />
+            <label htmlFor="code-2" className="visually-hidden"></label>
+            <input id="code-2" type="text" className="register-code__input" />
           </div>
 
           <div className="register-code__block">
-            <label htmlFor="input" className="visually-hidden"></label>
-            <input id="input" type="text" className="register-code__input" />
+            <label htmlFor="code-3" className="visually-hidden"></label>
+            <input id="code-3" type="text" className="register-code__input" />
           </div>
 
           <div className="register-code__block">
-            <label htmlFor="input" className="visually-hidden"></label>
-            <input id="input" type="text" className="register-code__input" />
+            <label htmlFor="code-4" className="visually-hidden"></label>
+            <input id="code-4" type="text" className="register-code__input" />
           </div>
 
           <div className="register-code__block">
-            <label htmlFor="input" className="visually-hidden"></label>
-            <input id="input" type="text" className="register-code__input" />
+            <label htmlFor="code-5" className="visually-hidden"></label>
+            <input id="code-5" type="text" className="register-code__input" />
           </div>
 
           <div className="register-code__block">
-            <label htmlFor="input" className="visually-hidden"></label>
-            <input id="input" type="text" className="register-code__input" />
+            <label htmlFor="code-6" className="visually-hidden"></label>
+            <input id="code-6" type="text" className="register-code__input" />
           </div>
         </div>
 

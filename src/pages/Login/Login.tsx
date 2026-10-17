@@ -20,13 +20,13 @@ const Login = () => {
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
-          stroke-width="1.5"
+          strokeWidth="1.5"
           stroke="currentColor"
           className="login__arraw"
         >
           <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeLinecap="round"
+            strokeLinejoin="round"
             d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
           />
         </svg>
@@ -39,7 +39,7 @@ const Login = () => {
               Електронна адреса
             </label>
             <input
-              type="text"
+              type="email"
               name="email"
               id="email"
               className="login__input"
@@ -58,7 +58,7 @@ const Login = () => {
               className="login__input"
               placeholder="Введіть пароль"
             />
-            <button onClick={() => {history.push("/reset-password")}} className="login__pasword-btn">Забули пароль?</button>
+            <button onClick={() => {history.push("/reset-password")}} className="login__password-btn">Забули пароль?</button>
           </div>
         </div>
 

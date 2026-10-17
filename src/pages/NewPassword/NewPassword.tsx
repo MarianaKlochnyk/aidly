@@ -15,13 +15,13 @@ const NewPassword = () => {
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
-          stroke-width="1.5"
+          strokeWidth="1.5"
           stroke="currentColor"
           className="new-password__arraw"
         >
           <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeLinecap="round"
+            strokeLinejoin="round"
             d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
           />
         </svg>
@@ -36,33 +36,33 @@ const NewPassword = () => {
         </div>
         <div className="new-password__inputs">
           <div className="new-password__block-obj">
-            <label htmlFor="email" className="new-password__label">
+            <label htmlFor="password" className="new-password__label">
               Пароль
             </label>
             <input
               type="password"
               name="email"
-              id="email"
+              id="password"
               className="new-password__input"
               placeholder="Введіть електронну адресу"
             />
           </div>
 
           <div className="new-password__block-obj">
-            <label htmlFor="password" className="new-password__label">
+            <label htmlFor="confirm-password" className="new-password__label">
               Пітвердження пароля
             </label>
             <input
               type="password"
               name="password"
-              id="password"
+              id="confirm-password"
               className="new-password__input"
               placeholder="Введіть пароль"
             />
           </div>
         </div>
 
-        <button onClick = {() => {history.push("/success-password")}} className="login__button">ЗМІНИТИ ПАРОЛЬ</button>
+        <button onClick = {() => {history.push("/success-password")}} className="new-password__button">ЗМІНИТИ ПАРОЛЬ</button>
       </div>
     </div>
   );

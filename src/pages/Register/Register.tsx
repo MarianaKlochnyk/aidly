@@ -19,99 +19,108 @@ const Register = () => {
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
-          stroke-width="1.5"
+          strokeWidth="1.5"
           stroke="currentColor"
           className="register__arraw"
         >
           <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeLinecap="round"
+            strokeLinejoin="round"
             d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
           />
         </svg>
       </div>
       <h1 className="register__main-title">Реєстрація</h1>
       <div className="register__main">
-        <div className="register__inputs">
-          <div className="register__block">
+        <form className="register__form" action="">
+          <div className="register__inputs">
+            <div className="register__block">
+              <div className="register__block-obj">
+                <label htmlFor="name" className="register__label">
+                  Ім'я
+                </label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  className="register__input block-input"
+                  placeholder="Введіть ім’я"
+                />
+              </div>
+
+              <div className="register__block-obj">
+                <label htmlFor="surname" className="register__label">
+                  Прізвище
+                </label>
+                <input
+                  type="text"
+                  name="surname"
+                  id="surname"
+                  className="register__input block-input"
+                  placeholder="Введіть прізвище"
+                />
+              </div>
+            </div>
+
             <div className="register__block-obj">
-              <label htmlFor="name" className="register__label">
-                Ім'я
+              <label htmlFor="email" className="register__label">
+                Електронна адреса
               </label>
               <input
-                type="text"
-                name="name"
-                id="name"
-                className="register__input block-input"
-                placeholder="Введіть ім’я"
+                type="email"
+                name="email"
+                id="email"
+                className="register__input"
+                placeholder="Введіть електронну адресу"
               />
             </div>
 
             <div className="register__block-obj">
-              <label htmlFor="surname" className="register__label">
-                Прізвище
+              <label htmlFor="password" className="register__label">
+                Пароль
               </label>
               <input
-                type="text"
-                name="surname"
-                id="surname"
-                className="register__input block-input"
-                placeholder="Введіть прізвище"
+                type="password"
+                name="password"
+                id="password"
+                className="register__input"
+                placeholder="Введіть пароль"
+              />
+            </div>
+
+            <div className="register__block-obj">
+              <label htmlFor="repeatpassword" className="register__label">
+                Підтвердження пароля
+              </label>
+              <input
+                type="password"
+                name="repeatpassword"
+                id="repeatpassword"
+                className="register__input"
+                placeholder="Повторіть пароль"
               />
             </div>
           </div>
-
-          <div className="register__block-obj">
-            <label htmlFor="email" className="register__label">
-              Електронна адреса
+          <div className="register__checkbox-conteiner">
+            <input id="terms" type="checkbox" className="register__checkbox" />
+            <label htmlFor="terms" className="register__checkbox-label">
+              <span className="register__checkbox-label-span">
+                Я погоджуюся з
+              </span>
+              Умовами використання та Політикою конфіденційності
             </label>
-            <input
-              type="text"
-              name="email"
-              id="email"
-              className="register__input"
-              placeholder="Введіть електронну адресу"
-            />
           </div>
 
-          <div className="register__block-obj">
-            <label htmlFor="password" className="register__label">
-              Пароль
-            </label>
-            <input
-              type="password"
-              name="password"
-              id="password"
-              className="register__input"
-              placeholder="Введіть пароль"
-            />
-          </div>
-
-          <div className="register__block-obj">
-            <label htmlFor="repeatpassword" className="register__label">
-              Підтвердження пароля
-            </label>
-            <input
-              type="password"
-              name="repeatpassword"
-              id="repeatpassword"
-              className="register__input"
-              placeholder="Повторіть пароль"
-            />
-          </div>
-        </div>
-
-        <div className="register__checkbox-conteiner">
-          <input id="terms" type="checkbox" className="register__checkbox" />
-          <label htmlFor="terms" className="register__checkbox-label">
-            <span className="register__checkbox-label-span">
-              Я погоджуюся з
-            </span>{" "}
-            Умовами використання та Політикою конфіденційності
-          </label>
-        </div>
-
-        <button className="register__button" onClick = {() => {history.push("register-code")}}>СТВОРИТИ АКАУНТ</button>
+          <button
+            type="submit"
+            className="register__button"
+            onClick={() => {
+              history.push("/register-code");
+            }}
+          >
+            СТВОРИТИ АКАУНТ
+          </button>
+        </form>
       </div>
       <p className="register__or">або</p>
 
